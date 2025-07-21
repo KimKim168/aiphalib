@@ -1,6 +1,10 @@
-import ReadMoreButton from "./read-more-button";
+import { usePage } from '@inertiajs/react';
+import ReadMoreButton from './read-more-button';
 
 const OurBlog = () => {
+    const { headingBlog } = usePage().props;
+    const { locale } = usePage().props;
+    const fontClass = locale === 'kh' ? 'font-siemreap-regular' : '';
     const image = [
         {
             title: 'Web Development',
@@ -49,8 +53,12 @@ const OurBlog = () => {
         <div className="pt-5 lg:pt-10">
             <div className="bg-blue-100 py-2 sm:py-10 dark:bg-blue-900">
                 <div className="container mx-auto px-4">
-                    <h2 className="mb-2 text-center sm:mb-4 dark:text-white">Blogs</h2>
-                    <p className="text-center text-2xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200">Read Our Latest Tips & Tricks</p>
+                    <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
+                        {locale === 'kh' ? (headingBlog?.title_kh ?? headingBlog?.title) : headingBlog?.title}
+                    </h2>
+                    <p className={`text-center text-2xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200 ${fontClass}`}>
+                        {locale === 'kh' ? (headingBlog?.short_description_kh ?? headingBlog?.short_description) : headingBlog?.short_description}
+                    </p>
                 </div>
             </div>
 
@@ -67,9 +75,9 @@ const OurBlog = () => {
                     ></path>
                 </svg>
             </div>
-            
+
             <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 md:px-20">
-                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {image?.map((item) => (
                         <div key={item.id} className="overflow-hidden rounded-2xl bg-white shadow-lg">
                             {/* Image Section */}

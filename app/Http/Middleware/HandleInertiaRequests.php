@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use App\Models\ApplicationInfo;
+use App\Models\Banner;
+use App\Models\Heading;
 use App\Models\ItemCategory;
 use App\Models\Link;
 use App\Models\Page;
@@ -65,6 +67,8 @@ class HandleInertiaRequests extends Middleware
             'CKEDITOR_USE_FILE_FULL_PATH' => env('CKEDITOR_USE_FILE_FULL_PATH'),
 
             'application_info' => ApplicationInfo::first(),
+            'socialMedia' => Link::where('status', 'active')->orderBy('order_index')->get(),
+            'bannerForAllPages' => Banner::where('position_code','BANNER_FOR_ALL_PAGES')->orderBy('id','desc')->where('status','active')->first(),
             'links' => Link::where('status', 'active')->orderBy('order_index')->get(),
             'item_categories' => ItemCategory::with('children')->withCount('items')->where('status', 'active')->where('parent_code', null)->orderBy('order_index')->orderBy('name')->get() ?? [],
             'post_counts' => Post::where('status', 'active')->count(),

@@ -6,18 +6,20 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { usePage } from '@inertiajs/react';
 
 type BreadcrumbContentProps = {
   title: string;
 };
 
 const BreadcrumbContent: React.FC<BreadcrumbContentProps> = ({ title }) => {
+  const { bannerForAllPages } = usePage().props;
   return (
     <div className="relative flex h-40 w-full items-center justify-center overflow-hidden lg:h-60">
       {/* Background image with dark overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/demo-images/newBanner.png"
+          src={`/assets/images/banners/thumb/${bannerForAllPages?.image}`}
           alt="Background"
           className="h-full w-full object-cover"
         />

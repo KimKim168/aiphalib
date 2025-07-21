@@ -70,9 +70,9 @@ export const AnimatedTooltip = ({
                 <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
                 <div className="absolute -bottom-px left-10 z-30 h-px w-[40%] bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
                 <div className="relative z-30 text-base font-bold text-white">
-                  {item.name}
+                  {item?.title}
                 </div>
-                <div className="text-xs text-white">{item.designation}</div>
+                {/* <div className="text-xs text-white">{item.designation}</div> */}
               </motion.div>
             )}
           </AnimatePresence>
@@ -81,8 +81,8 @@ export const AnimatedTooltip = ({
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
-            src={`${item.image}`}
-            alt={item.name}
+            src={`/assets/images/links/${item?.image}`}
+            alt={item?.title}
             className="relative !m-0 h-14 w-14 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 bg-white group-hover:z-30 group-hover:scale-105"
           />
           </a>

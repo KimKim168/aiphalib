@@ -1,3 +1,4 @@
+import { usePage } from '@inertiajs/react';
 import React from 'react';
 
 const relatedItems = [
@@ -34,12 +35,13 @@ const relatedItems = [
 ];
 
 const Modern = () => {
+  const { support } = usePage().props;
   return (
     <section className="grid grid-cols-1 gap-8 px-4 py-10 lg:grid-cols-2 lg:px-20">
       {/* Left: Large Image */}
       <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-lg">
         <img
-          src="/assets/demo-images/newBanner.png"
+          src={`/assets/images/item_categories/${support?.image}`}
           alt="Main"
           className="h-full w-full object-cover transition duration-300 hover:scale-105"
         />

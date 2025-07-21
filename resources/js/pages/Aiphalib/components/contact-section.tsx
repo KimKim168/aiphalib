@@ -1,12 +1,20 @@
+import { usePage } from '@inertiajs/react';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 const ContactSection = () => {
+    const { headingContact, application_info } = usePage().props;
+    const { locale } = usePage().props;
+    const fontClass = locale === 'kh' ? 'font-siemreap-regular' : '';
     return (
         <section className="py-16">
             <div className="container mx-auto px-4">
-                <h2 className="text-primary-two mb-2 text-center text-base font-bold">Get In Touch</h2>
-                <p className="mb-10 text-center text-2xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200">
-                    Let’s Discuss Your Business Needs
+                <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
+                    {locale === 'kh' ? (headingContact?.title_kh ?? headingContact?.title) : headingContact?.title}
+                </h2>
+                <p className={`mb-10 text-center text-xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200 ${fontClass}`}>
+                    {locale === 'kh'
+                        ? (headingContact?.short_description_kh ?? headingContact?.short_description)
+                        : headingContact?.short_description}
                 </p>
             </div>
 
@@ -18,7 +26,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                         <h4 className="text-xl font-semibold text-gray-900">Our Email</h4>
-                        <p className="text-gray-600">example@gmail.com</p>
+                        <p className="text-gray-600">{application_info?.email}</p>
                     </div>
                 </div>
 
@@ -29,7 +37,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                         <h4 className="text-xl font-semibold text-gray-900">Phone</h4>
-                        <p className="text-gray-600">+1 123 456 7890</p>
+                        <p className="text-gray-600">{application_info?.phone}</p>
                     </div>
                 </div>
 
@@ -40,7 +48,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                         <h4 className="text-xl font-semibold text-gray-900">Address</h4>
-                        <p className="text-gray-600">789 Discovery, New York</p>
+                        <p className="text-gray-600">{application_info?.address}</p>
                     </div>
                 </div>
             </div>

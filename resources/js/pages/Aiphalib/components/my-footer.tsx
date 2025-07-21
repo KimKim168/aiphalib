@@ -3,40 +3,40 @@ import { usePage } from '@inertiajs/react';
 import { MyFooterSocialTooltip } from './my-footer-social-tooltip';
 
 const MyFooter = () => {
-    const websiteInfos = {
-      address: "123 Main St, Phnom Penh, Cambodia",
-      phone: "+855 12 345 678",
-      hours: "Mon-Fri 8:00 AM - 5:00 PM",
-      closed: "Sunday",
-    };
+    // const websiteInfos = {
+    //   address: "123 Main St, Phnom Penh, Cambodia",
+    //   phone: "+855 12 345 678",
+    //   hours: "Mon-Fri 8:00 AM - 5:00 PM",
+    //   closed: "Sunday",
+    // };
 
-      const socialMedia = [
-      {
-        id: 1,
-        image: "/assets/demo-images/facebook.png",
-        name: "Facebook",
-        alt: "Facebook",
-        link: "https://facebook.com",
-        hoverColor: "hover:bg-[#1877F2]", // Facebook Blue
-      },
-      {
-        id: 2,
-        image: "/assets/demo-images/telegram.png",
-        name: "Telegram",
-        alt: "Telegram",
-        link: "https://telegram.org",
-        hoverColor: "hover:bg-[#0088cc]", // Telegram Blue
-      },
-      {
-        id: 3,
-        image: "/assets/demo-images/youtube.png",
-        name: "YouTube",
-        alt: "YouTube",
-        link: "https://youtube.com",
-        hoverColor: "hover:bg-[#FF0000]", // YouTube Red
-      },
-    ];
-    // const { socialMedia } = usePage().props;
+    //   const socialMedia = [
+    //   {
+    //     id: 1,
+    //     image: "/assets/demo-images/facebook.png",
+    //     name: "Facebook",
+    //     alt: "Facebook",
+    //     link: "https://facebook.com",
+    //     hoverColor: "hover:bg-[#1877F2]", // Facebook Blue
+    //   },
+    //   {
+    //     id: 2,
+    //     image: "/assets/demo-images/telegram.png",
+    //     name: "Telegram",
+    //     alt: "Telegram",
+    //     link: "https://telegram.org",
+    //     hoverColor: "hover:bg-[#0088cc]", // Telegram Blue
+    //   },
+    //   {
+    //     id: 3,
+    //     image: "/assets/demo-images/youtube.png",
+    //     name: "YouTube",
+    //     alt: "YouTube",
+    //     link: "https://youtube.com",
+    //     hoverColor: "hover:bg-[#FF0000]", // YouTube Red
+    //   },
+    // ];
+    const { socialMedia } = usePage().props;
     const { application_info } = usePage().props;
     // console.log(application_info);
     const { t } = useTranslation();
@@ -55,24 +55,24 @@ const MyFooter = () => {
                         <ul className={`space-y-2 text-sm leading-relaxed text-white ${fontClass}`}>
                             <li>
                                 <span className="font-medium">{t('Address')} :</span>{' '}
-                                {/* {locale === 'kh' ? application_info?.address_kh : application_info?.address} */}123 Main St, Phnom Penh, Cambodia
+                                {locale === 'kh' ? application_info?.address_kh : application_info?.address}
                             </li>
                             <li>
                                 <span className="font-medium">{t('Phone')} :</span>{' '}
-                                {/* {locale === 'kh' ? (application_info?.phone_kh ?? application_info?.phone) : application_info?.phone} */}+855 12 345 678
+                                {locale === 'kh' ? (application_info?.phone_kh ?? application_info?.phone) : application_info?.phone}
                             </li>
                             <li>
                                 <span className="font-medium">{t('Working Hours')} :</span>{' '}
-                                {/* {locale === 'kh'
+                                {locale === 'kh'
                                     ? application_info?.working_hours_kh 
-                                    : application_info?.working_hours} */}Mon-Fri
+                                    : application_info?.working_hours}
       
                             </li>
                             <li>
                                 <span className="font-medium">{t('Working Days')} :</span>{' '}
-                                {/* {locale === 'kh'
+                                {locale === 'kh'
                                     ? application_info?.working_days_kh
-                                    : application_info?.working_days} */}8:00 AM - 5:00 PM
+                                    : application_info?.working_days}
                             </li>
                             <li className="font-semibold text-red-400">{locale === 'kh' ? t('អាទិត្យ៖ បិទ') : 'Sunday : CLOSED'}</li>
                         </ul>
