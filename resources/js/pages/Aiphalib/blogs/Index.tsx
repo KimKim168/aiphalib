@@ -1,15 +1,16 @@
-import React from 'react'
-import AiphalibLayout from '../layout/Layout'
-import BreadcrumbContent from '../components/breadcrumb-content'
-import MyBlog from '../components/my-blog'
+import { Head } from '@inertiajs/react';
+import BreadcrumbContent from '../components/breadcrumb-content';
+import MyBlog from '../components/my-blog';
+import AiphalibLayout from '../layout/Layout';
 
 const Index = () => {
-  return (
-     <AiphalibLayout>
-        <BreadcrumbContent title={`blogs`}/>
-        <MyBlog/>
-    </AiphalibLayout>
-  )
-}
+    return (
+        <AiphalibLayout>
+            <Head title={'Blogs'} />
+            <BreadcrumbContent title={`blogs`} />
+            <MyBlog />
+        </AiphalibLayout>
+    );
+};
 
-export default Index
+export default Index;

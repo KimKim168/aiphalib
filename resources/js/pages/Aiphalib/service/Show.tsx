@@ -1,5 +1,5 @@
 import MyNoData from '@/components/my-no-data';
-import { Link, usePage } from '@inertiajs/react';
+import { Head, Link, usePage } from '@inertiajs/react';
 import AiphalibLayout from '../layout/Layout';
 
 const Show = () => {
@@ -7,6 +7,8 @@ const Show = () => {
 
     return (
         <AiphalibLayout>
+            <Head title={'Services'} />
+
             <div className="mx-auto my-10 grid max-w-screen-2xl flex-col gap-6 px-4 sm:px-10 lg:grid-cols-3 xl:px-20">
                 <div className="prose flex min-h-[200px] w-full max-w-none items-center justify-center lg:col-span-2">
                     {service?.long_description ? <div dangerouslySetInnerHTML={{ __html: service.long_description }} /> : <MyNoData />}
@@ -19,7 +21,7 @@ const Show = () => {
 
                         <div className="space-y-6">
                             {relatedServices?.map((post, index) => (
-                                <Link 
+                                <Link
                                     href={`/services/${post.id}`}
                                     key={index}
                                     className="group flex cursor-pointer items-start gap-4 rounded-xl p-3 transition-all hover:bg-blue-50 dark:hover:bg-neutral-800"

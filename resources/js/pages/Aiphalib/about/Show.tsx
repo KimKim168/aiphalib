@@ -1,4 +1,4 @@
-import { usePage } from '@inertiajs/react';
+import { Head, usePage } from '@inertiajs/react';
 import AiphalibLayout from '../layout/Layout';
 
 const Show = () => {
@@ -44,6 +44,7 @@ const Show = () => {
 
     return (
         <AiphalibLayout>
+            <Head title={('About Us')} />
             <section className="mx-auto max-w-7xl px-4 md:px-10 xl:px-0 py-10">
                 <section className="prose dark:prose-invert max-w-none">
                     <div dangerouslySetInnerHTML={{ __html: page?.long_description }} />
