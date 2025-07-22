@@ -69,7 +69,7 @@ const MyTableData = () => {
                                     <ArrowUpDown size={16} /> {t('Name Khmer')}
                                 </span>
                             </TableHead>
-                            <TableHead onClick={() => handleSort('short_description')}>
+                            {/* <TableHead onClick={() => handleSort('short_description')}>
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Short Description')}
                                 </span>
@@ -88,7 +88,7 @@ const MyTableData = () => {
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Order Index')}
                                 </span>
-                            </TableHead>
+                            </TableHead> */}
                             <TableHead onClick={() => handleSort('status')}>
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Status')}
@@ -125,9 +125,8 @@ const MyTableData = () => {
                                 <TableCell>
                                     <span className="flex h-full items-center justify-start">
                                         <ViewButton item={item} />
-
-                                        {hasPermission('post delete') && <DeleteButton deletePath="/admin/item_categories/" id={item.id} />}
-                                        {hasPermission('post update') && <EditButton item={item} />}
+                                        {hasPermission('item delete') && <DeleteButton deletePath="/admin/item_categories/" id={item.id} />}
+                                        {hasPermission('item update') && <EditButton item={item} />}
                                     </span>
                                 </TableCell>
                                 <TableCell>
@@ -188,11 +187,11 @@ const MyTableData = () => {
                                 <TableCell>{item.code || '---'}</TableCell>
                                 <TableCell>{item.name || '---'}</TableCell>
                                 <TableCell>{item.name_kh || '---'}</TableCell>
-                                <TableCell>{item.short_description || '---'}</TableCell>
+                                {/*<TableCell>{item.short_description || '---'}</TableCell>
                                 <TableCell>{item.short_description_kh || '---'}</TableCell>
                                 <TableCell>{item.parent_code || '---'}</TableCell>
                                 <TableCell>{item.order_index || '---'}</TableCell>
-                                {/* <TableCell>{item.order_index || '---'}</TableCell> */}
+                                 <TableCell>{item.order_index || '---'}</TableCell> */}
                                 <TableCell>
                                     {hasPermission('post update') ? (
                                         <MyUpdateStatusButton

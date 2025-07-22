@@ -30,7 +30,7 @@ const MyMenu = () => {
     const getLinkClass = (linkPath: string) =>
         linkPath === activePath
             ? 'text-primary-two underline underline-offset-4'
-            : 'text-gray-600 dark:text-gray-300 hover:text-primary-two hover:underline hover:underline-offset-4 transition';
+            : 'text-gray-600 dark:text-gray-200 hover:text-primary-two hover:underline hover:underline-offset-4 transition';
 
     return (
         <>
@@ -52,12 +52,12 @@ const MyMenu = () => {
                 <Sheet>
                     <SheetTrigger asChild>
                         <Button variant="outline" size="icon" className="p-0">
-                            <AlignLeft className="text-primary-two" width={35} height={35} aria-label="Toggle menu" />
+                            <AlignLeft className="text-teal-700 dark:text-white" width={35} height={35} aria-label="Toggle menu" />
                         </Button>
                     </SheetTrigger>
-                    <SheetContent side="left" className="bg-background/20 backdrop-blur-xl">
+                    <SheetContent side="left" className="bg-background backdrop-blur-xl">
                         <SheetHeader className="text-start">
-                            <SheetTitle className="text-center text-white">Menu</SheetTitle>
+                            <SheetTitle className="text-center text-black">Menu</SheetTitle>
                             <ul className="mt-4 flex flex-col justify-center space-y-4">
                                 {menuItems.map((item) => (
                                     <li key={item.id}>

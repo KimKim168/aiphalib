@@ -204,7 +204,7 @@ export default function Create() {
                     </div>
 
                     <div className="grid grid-cols-12 gap-8">
-                        <div className="col-span-6">
+                        {/* <div className="col-span-6">
                             <FormField
                                 control={form.control}
                                 name="code"
@@ -284,7 +284,6 @@ export default function Create() {
                                                                         />
                                                                     )}
                                                                     {shop.name}
-                                                                    {/* {shop.name_kh && `(${shop.name_kh})`} */}
                                                                 </CommandItem>
                                                             ))}
                                                         </CommandGroup>
@@ -298,7 +297,7 @@ export default function Create() {
                                 )}
                             />
                         </div>
-
+ */}
                         <div className="col-span-12">
                             <FormField
                                 control={form.control}
@@ -347,7 +346,7 @@ export default function Create() {
                     />
 
                     <div className="grid grid-cols-6 gap-4 lg:grid-cols-12">
-                        <div className="col-span-6 flex space-x-2">
+                        {/* <div className="col-span-6 flex space-x-2">
                             <span className="flex-1">
                                 <FormField
                                     control={form.control}
@@ -364,7 +363,7 @@ export default function Create() {
                                     )}
                                 />
                             </span>
-                        </div>
+                        </div> */}
 
                         <div className="col-span-6">
                             <FormField
@@ -446,7 +445,7 @@ export default function Create() {
                             />
                         </div>
 
-                        <div className="col-span-6">
+                        {/* <div className="col-span-6">
                             <FormField
                                 control={form.control}
                                 name="brand_code"
@@ -511,7 +510,7 @@ export default function Create() {
                                                                         />
                                                                     )}
                                                                     {brand.name}
-                                                                    {/* {brand.name_kh && `(${brand.name_kh})`} */}
+                                                                    
                                                                 </CommandItem>
                                                             ))}
                                                         </CommandGroup>
@@ -524,8 +523,8 @@ export default function Create() {
                                     </FormItem>
                                 )}
                             />
-                        </div>
-
+                        </div> */}
+{/* 
                         <div className="col-span-6">
                             <FormField
                                 control={form.control}
@@ -587,7 +586,7 @@ export default function Create() {
                                                                                 )}
                                                                             />
                                                                             {model.name}
-                                                                            {/* {model.name_kh && `(${model.name_kh})`} */}
+                                                                            
                                                                         </CommandItem>
                                                                     ))}
                                                         </CommandGroup>
@@ -600,8 +599,8 @@ export default function Create() {
                                     </FormItem>
                                 )}
                             />
-                        </div>
-
+                        </div> */}
+{/* 
                         <div className="col-span-6">
                             <FormField
                                 control={form.control}
@@ -666,7 +665,7 @@ export default function Create() {
                                                                         />
                                                                     )}
                                                                     {bodyType.name} 
-                                                                    {/* {bodyType.name_kh && `(${bodyType.name_kh})`} */}
+                                                                   
                                                                 </CommandItem>
                                                             ))}
                                                         </CommandGroup>
@@ -678,7 +677,7 @@ export default function Create() {
                                     </FormItem>
                                 )}
                             />
-                        </div>
+                        </div> */}
 
                         <div className="col-span-6">
                             <FormField
@@ -688,8 +687,8 @@ export default function Create() {
                                     <FormItem key={field.value}>
                                         <FormLabel>{t('Status')}</FormLabel>
                                         <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                            <FormControl>
-                                                <SelectTrigger>
+                                            <FormControl className='h-10'>
+                                                <SelectTrigger >
                                                     <SelectValue placeholder="Select Status" />
                                                 </SelectTrigger>
                                             </FormControl>

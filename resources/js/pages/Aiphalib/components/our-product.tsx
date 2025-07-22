@@ -1,7 +1,7 @@
 import { usePage } from '@inertiajs/react';
 import ReadMoreButton from './read-more-button';
 
-const OurProduct = () => {
+const   OurProduct = () => {
     const { headingProduct, allDataProducts } = usePage().props;
     const { locale } = usePage().props;
     const fontClass = locale === 'kh' ? 'font-siemreap-regular' : '';

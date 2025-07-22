@@ -245,7 +245,7 @@ export default function Create({
                     </div>
                 </div>
                 <div className="grid grid-cols-12 gap-4">
-                    <div className="col-span-6">
+                    {/* <div className="col-span-6">
                         <FormField
                             control={form.control}
                             name="order_index"
@@ -260,9 +260,9 @@ export default function Create({
                                 </FormItem>
                             )}
                         />
-                    </div>
+                    </div> */}
 
-                    <div className="col-span-6">
+                    {/* <div className="col-span-6">
                         <FormField
                             control={form.control}
                             name="parent_code"
@@ -288,7 +288,6 @@ export default function Create({
                                                 </FormControl>
                                             </PopoverTrigger>
                                         )}
-
                                         <PopoverContent className="w-[200px] p-0">
                                             <Command>
                                                 <CommandInput placeholder={t("Search")} />
@@ -334,9 +333,9 @@ export default function Create({
                                 </FormItem>
                             )}
                         />
-                    </div>
+                    </div> */}
                 </div>
-
+{/* 
                 <FormField
                     control={form.control}
                     name="short_description"
@@ -363,7 +362,7 @@ export default function Create({
                             <FormMessage>{errors.short_description_kh && <div>{errors.short_description_kh}</div>}</FormMessage>
                         </FormItem>
                     )}
-                />
+                /> */}
 
                 <FormField
                     control={form.control}

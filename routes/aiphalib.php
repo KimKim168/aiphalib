@@ -17,9 +17,15 @@ Route::get('/', function () {
     $allDataServices = Item::where('category_code', 'SERVICES')
         ->where('status', 'active')
         ->orderBy('id', 'desc')
-        ->with('images') // eager load
+        ->with('images')
+        ->limit(6) // eager load
         ->get();
     $ourClients = Item::where('category_code', 'OUR_CLIENTS')
+        ->where('status', 'active')
+        ->orderBy('id', 'desc')
+        ->with('images') // eager load
+        ->get();
+    $ourBlogs = Item::where('category_code', 'BLOGS')
         ->where('status', 'active')
         ->orderBy('id', 'desc')
         ->with('images') // eager load
@@ -34,6 +40,7 @@ Route::get('/', function () {
         'heroSection' => $heroSection,
         'allDataServices' => $allDataServices,
         'ourClients' => $ourClients,
+        'ourBlogs' => $ourBlogs,
 
     ]);
 });
@@ -99,8 +106,26 @@ Route::get('/products/{id}', function ($id) {
     ]);
 });
 
-Route::get('/blogs/{id}', function () {
-    return Inertia::render('Aiphalib/blogs/Show');
+Route::get('/blogs', function () {
+    $headingBlog = Heading::where('code', 'BLOGS')->where('status', 'active')->first();
+   $allDataBlogs = Item::where('category_code', 'BLOGS')
+        ->where('status', 'active')
+        ->orderBy('id', 'desc')
+        ->with('images') // eager load
+        ->get();
+    return Inertia::render('Aiphalib/blogs/Index',[
+        'allDataBlogs' => $allDataBlogs,
+        'headingBlog' => $headingBlog,
+    ]);
+});
+
+Route::get('/blogs/{id}', function ($id) {
+    $blog = Item::find($id);
+    $relatedBlogs = Item::with('category', 'images')->where('id', '!=', $id)->where('category_code', $blog->category_code)->orderBy('id', 'desc')->limit(6)->get();
+    return Inertia::render('Aiphalib/blogs/Show',[
+        'blog' => $blog,
+        'relatedBlogs' => $relatedBlogs,
+    ]);
 });
 
 Route::get('/support', function () {
@@ -109,14 +134,16 @@ Route::get('/support', function () {
         ->where('status', 'active')
         ->orderBy('id', 'desc')
         ->first();
-        // return ($support);
-    // $support = Item::where('category_code', 'SUPPORT')
-    //     ->where('status', 'active')
-    //     ->orderBy('id', 'desc')
-    //     ->with('images') // eager load
-    //     ->get();
+    $dataSupport = Item::where('category_code', 'SUPPORT')
+        ->where('status', 'active')
+        ->orderBy('id', 'desc')
+        ->with('images') // eager load
+        ->get();
+    // return ($dataSupport);
+
     return Inertia::render('Aiphalib/support/Index', [
         'headingContact' => $headingContact,
         'support' => $support,
+        'dataSupport' => $dataSupport,
     ]);
 });

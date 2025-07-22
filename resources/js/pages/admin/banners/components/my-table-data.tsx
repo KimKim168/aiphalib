@@ -51,8 +51,8 @@ const MyTableData = () => {
                             <TableHead className="w-[50px]">{t('No')}</TableHead>
                             <TableHead className="text-left">{t('Action')}</TableHead>
                             <TableHead>{t('Image')}</TableHead>
-                            <TableHead className="text-center">Video</TableHead>
-                            <TableHead className="text-center">Link</TableHead>
+                            {/* <TableHead className="text-center">Video</TableHead>
+                            <TableHead className="text-center">Link</TableHead> */}
                             <TableHead onClick={() => handleSort('title')}>
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Title')}
@@ -184,7 +184,7 @@ const MyTableData = () => {
                                         />
                                     )}
                                 </TableCell>
-                                <TableCell className="text-center">
+                                {/* <TableCell className="text-center">
                                     {item.video ? (
                                         <a href={`/assets/files/banners/videos/${item.video}`} target="_blank">
                                             <MyTooltipButton variant="ghost" title={item.video}>
@@ -215,7 +215,7 @@ const MyTableData = () => {
                                     ) : (
                                         '---'
                                     )}
-                                </TableCell>
+                                </TableCell> */}
                                 <TableCell>{item.title || '---'}</TableCell>
                                 <TableCell>{item.title_kh || '---'}</TableCell>
                                 {/* <TableCell>{item.short_description || '---'}</TableCell>
