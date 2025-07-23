@@ -28,7 +28,7 @@ const MyHero = () => {
 
                 {/* Right: Content Section */}
                 <div>
-                    <p className="text-primary-two mb-2 text-sm font-semibold tracking-widest uppercase">About Us</p>
+                    <p className="text-primary-two mb-2 text-sm font-semibold tracking-widest uppercase">About</p>
                     <h2 className="text-primary-tree mb-4 text-2xl leading-snug font-extrabold lg:text-4xl">{item.name}</h2>
                     <div
                         className="text-primary-tree prose mb-8 text-base leading-relaxed whitespace-pre-line"

@@ -4,6 +4,7 @@ use App\Models\Banner;
 use App\Models\Heading;
 use App\Models\Item;
 use App\Models\ItemCategory;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -25,12 +26,11 @@ Route::get('/', function () {
         ->orderBy('id', 'desc')
         ->with('images') // eager load
         ->get();
-    $ourBlogs = Item::where('category_code', 'BLOGS')
-        ->where('status', 'active')
+    $ourBlogs = Post::where('status', 'active')
         ->orderBy('id', 'desc')
         ->with('images') // eager load
         ->get();
-    // return ($headingServices);
+    // return ($ourBlogs);
     return Inertia::render('Aiphalib/home/Index', [
         'slides' => $slides,
         'heading' => $headingSlide,
@@ -108,8 +108,7 @@ Route::get('/products/{id}', function ($id) {
 
 Route::get('/blogs', function () {
     $headingBlog = Heading::where('code', 'BLOGS')->where('status', 'active')->first();
-   $allDataBlogs = Item::where('category_code', 'BLOGS')
-        ->where('status', 'active')
+   $allDataBlogs = Post::where('status', 'active')
         ->orderBy('id', 'desc')
         ->with('images') // eager load
         ->get();
@@ -120,9 +119,10 @@ Route::get('/blogs', function () {
 });
 
 Route::get('/blogs/{id}', function ($id) {
-    $blog = Item::find($id);
-    $relatedBlogs = Item::with('category', 'images')->where('id', '!=', $id)->where('category_code', $blog->category_code)->orderBy('id', 'desc')->limit(6)->get();
-    return Inertia::render('Aiphalib/blogs/Show',[
+    $blog = Post::find($id);
+    $relatedBlogs = Post::where('id', '!=', $id)->orderBy('id', 'desc')->with('images')->limit(6)->get();
+    // return ($relatedBlogs);
+    return Inertia::render('Aiphalib/blogs/Show', [
         'blog' => $blog,
         'relatedBlogs' => $relatedBlogs,
     ]);

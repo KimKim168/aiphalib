@@ -20,7 +20,7 @@ const OurBlog = () => {
             </div>
 
             {/* SVG Divider */}
-            <div className="relative w-full overflow-hidden leading-none dark:bg-gray-800">
+            <div className="relative w-full overflow-hidden leading-none ">
                 <svg
                     className="relative block h-[60px] w-[101%] md:h-[150px]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -40,13 +40,13 @@ const OurBlog = () => {
                         <div key={item.id} className="overflow-hidden rounded-2xl bg-white shadow-lg">
                             <div className="relative p-2">
                                 <img
-                                    src={`/assets/images/items/${item?.images?.[0]?.image}`}
+                                    src={`/assets/images/posts/${item?.images?.[0]?.image}`}
                                     alt="Blog Image"
                                     className="aspect-video w-full rounded-md object-cover"
                                 />
                             </div>
                             <div className="p-4">
-                                <h2 className="line-clamp-2 text-xl font-bold text-gray-900">{item?.name}</h2>
+                                <h2 className="line-clamp-2 text-xl font-bold text-gray-900">{item?.title}</h2>
                                 <p className="mt-3 line-clamp-3 text-gray-600">{item.short_description}</p>
                                 <ReadMoreButton link="blogs" id={item?.id} />
                             </div>

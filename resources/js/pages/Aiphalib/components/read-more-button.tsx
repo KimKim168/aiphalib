@@ -13,7 +13,7 @@ const ReadMoreButton = ({link, id}) => {
           text-sm
           rounded-full
           transition duration-500
-          hover:bg-white hover:text-primary
+          hover:bg-white hover:text-primary dark:hover:text-[#0B7F7F]
         "
       >
         <Link href={`/${link}/${id}`}>Read More</Link> 

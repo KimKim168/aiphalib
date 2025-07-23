@@ -24,14 +24,14 @@ const MyBlog = () => {
 
                             <div className="relative p-2">
                                 <img
-                                    src={`/assets/images/items/thumb/${item?.images?.[0]?.image}`}
+                                    src={`/assets/images/posts/thumb/${item?.images?.[0]?.image}`}
                                     alt="Blog Image"
                                     className="aspect-video w-full rounded-md object-cover"
                                 />
                             </div>
                             {/* Content Section */}
                             <div className="p-4">
-                                <h2 className="line-clamp-2 text-xl font-bold text-gray-900">{item?.name}</h2>
+                                <h2 className="line-clamp-2 text-xl font-bold text-gray-900">{item?.title}</h2>
 
                                 {/* Description */}
                                 <p className="mt-3 line-clamp-3 text-gray-600">{item.short_description}</p>

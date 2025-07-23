@@ -158,26 +158,26 @@ export function AppSidebar() {
             permission: 'post view',
             url: '/admin/posts',
             icon: FilePenLineIcon,
-            subItems: [
-                {
-                    title: t('Posts'),
-                    permission: 'post view',
-                    icon: FilePenLineIcon,
-                    url: '/admin/posts',
-                },
-                {
-                    title: t('Categories'),
-                    permission: 'post view',
-                    icon: Layers2Icon,
-                    url: '/admin/post_categories',
-                },
-                {
-                    title: t('View Counts'),
-                    permission: 'post view',
-                    icon: Tally5Icon,
-                    url: '/admin/post_view_counts',
-                },
-            ],
+            // subItems: [
+            //     {
+            //         title: t('Posts'),
+            //         permission: 'post view',
+            //         icon: FilePenLineIcon,
+            //         url: '/admin/posts',
+            //     },
+            //     {
+            //         title: t('Categories'),
+            //         permission: 'post view',
+            //         icon: Layers2Icon,
+            //         url: '/admin/post_categories',
+            //     },
+            //     {
+            //         title: t('View Counts'),
+            //         permission: 'post view',
+            //         icon: Tally5Icon,
+            //         url: '/admin/post_view_counts',
+            //     },
+            // ],
         },
         {
             title: t('Pages'),

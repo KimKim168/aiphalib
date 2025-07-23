@@ -22,7 +22,7 @@ const MyService = () => {
                 </div>
             </div>
 
-            <div className="relative w-full overflow-hidden leading-none dark:bg-gray-800">
+            <div className="relative w-full overflow-hidden leading-none ">
                 <svg
                     className="relative block h-[60px] w-[101%] md:h-[150px]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ const MyService = () => {
                 </svg>
             </div>
 
-            <div className="mx-auto max-w-screen-2xl bg-white px-4 sm:px-10 md:px-20 dark:bg-gray-800">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 md:px-20 ">
                 <div className="mx-auto">
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {allDataServices.map((item, index) => (
@@ -56,7 +56,7 @@ const MyService = () => {
                     </div>
                     {/* View More Button */}
                     {allDataServices?.length >= 6 && (
-                        <div className="mt-6 text-center">
+                        <div className="py-6 text-center">
                             <ButtonViewMore link="services" />
                         </div>
                     )}

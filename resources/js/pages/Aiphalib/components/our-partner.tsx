@@ -107,7 +107,7 @@ const OurPartner: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="relative w-full overflow-hidden leading-none dark:bg-gray-800">
+                <div className="relative w-full overflow-hidden leading-none ">
                     <svg
                         className="relative block h-[60px] w-[101%] md:h-[150px]"
                         xmlns="http://www.w3.org/2000/svg"
@@ -122,12 +122,11 @@ const OurPartner: React.FC = () => {
                 </div>
 
                 <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 md:px-20">
-                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 xl:grid-cols-6">
+                    <div className='mx-auto '>
+                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 xl:grid-cols-6">
                         {ourClients?.map((item, i) => (
                             <div key={item.id} className="basis-1/2 md:basis-1/3 xl:basis-1/6">
                                 <div
-                                    prefetch
-                                    // href={`${item?.link}`}
                                     className="border-primary bg-background flex flex-col items-center justify-center gap-2 rounded border border-dashed p-2 transition-all duration-300 hover:-translate-2 hover:border-solid hover:shadow-[5px_5px_rgba(104,_96,_255,_0.4),_10px_10px_rgba(104,_96,_255,_0.3),_15px_15px_rgba(104,_96,_255,_0.2)]"
                                 >
                                     <img src={`/assets/images/items/thumb/${item?.images?.[0]?.image}`} alt={`Partner ${i + 1}`} className="h-12 object-contain" />
@@ -137,6 +136,7 @@ const OurPartner: React.FC = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
                     </div>
 
                     {/* <CarouselPrevious className="absolute top-1/2 -left-2 z-10 -translate-y-1/2 transform " /> */}

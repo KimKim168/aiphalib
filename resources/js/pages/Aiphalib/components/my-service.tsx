@@ -51,7 +51,7 @@ const MyService = () => {
                 </p>
             </div>
 
-            <div className="mx-auto max-w-screen-2xl bg-white px-4 sm:px-10 md:px-20 dark:bg-gray-800">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 md:px-20 ">
                 <div className="mx-auto">
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {allDataServices.map((item, index) => (
