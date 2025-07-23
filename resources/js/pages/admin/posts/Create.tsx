@@ -267,7 +267,7 @@ export default function Create() {
                         )}
                     />
 
-                    <div className="grid grid-cols-6 gap-4 lg:grid-cols-12">
+                    {/* <div className="grid grid-cols-6 gap-4 lg:grid-cols-12">
                         <div className="col-span-6 flex space-x-2">
                             <span>
                                 <FormField
@@ -345,7 +345,6 @@ export default function Create() {
                                                     {types.map((typeObject) => (
                                                         <SelectItem key={typeObject.id + typeObject.type} value={typeObject.type}>{typeObject.label}</SelectItem>
                                                     ))}
-                                                    {/* <SelectItem value="link">Link</SelectItem> */}
                                                 </SelectContent>
                                             </Select>
                                             <FormDescription>{t('Choose type (Link) for external content and fill Link input.')}</FormDescription>
@@ -453,7 +452,30 @@ export default function Create() {
                                 )}
                             />
                         </div>
-                    </div>
+                    </div> */}
+                    <div className="col-span-12">
+                            <FormField
+                                control={form.control}
+                                name="status"
+                                render={({ field }) => (
+                                    <FormItem key={field.value}>
+                                        <FormLabel>{t('Status')}</FormLabel>
+                                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                            <FormControl>
+                                                <SelectTrigger>
+                                                    <SelectValue placeholder="Select Status" />
+                                                </SelectTrigger>
+                                            </FormControl>
+                                            <SelectContent>
+                                                <SelectItem value="active">{t('Active')}</SelectItem>
+                                                <SelectItem value="inactive">{t('Inactive')}</SelectItem>
+                                            </SelectContent>
+                                        </Select>
+                                        <FormMessage>{errors.status && <div>{errors.status}</div>}</FormMessage>
+                                    </FormItem>
+                                )}
+                            />
+                        </div>
                     <FormField
                         control={form.control}
                         name="images"

@@ -52,7 +52,7 @@ const MyTableData = () => {
                             <TableHead className="w-[50px]">{t('No')}</TableHead>
                             <TableHead className="text-left">{t('Action')}</TableHead>
                             <TableHead>{t('Image')}</TableHead>
-                            <TableHead>{t('Link')}</TableHead>
+                            {/* <TableHead>{t('Link')}</TableHead> */}
                             <TableHead onClick={() => handleSort('title')}>
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Title')}
@@ -78,7 +78,7 @@ const MyTableData = () => {
                                     <ArrowUpDown size={16} /> {t('Status')}
                                 </span>
                             </TableHead>
-                            <TableHead onClick={() => handleSort('category_code')}>
+                            {/* <TableHead onClick={() => handleSort('category_code')}>
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Category Code')}
                                 </span>
@@ -92,7 +92,7 @@ const MyTableData = () => {
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Total View')}
                                 </span>
-                            </TableHead>
+                            </TableHead> */}
                             <TableHead onClick={() => handleSort('post_date')}>
                                 <span className="flex cursor-pointer items-center">
                                     <ArrowUpDown size={16} /> {t('Post Date')}
@@ -170,7 +170,7 @@ const MyTableData = () => {
                                         />
                                     )}
                                 </TableCell>
-                                <TableCell className="text-center">
+                                {/* <TableCell className="text-center">
                                     {item.link ? (
                                         <a href={`${item.link}`} target="_blank">
                                             <MyTooltipButton variant="ghost" title={item.link} className="p-0 hover:bg-transparent">
@@ -190,7 +190,7 @@ const MyTableData = () => {
                                     ) : (
                                         '---'
                                     )}
-                                </TableCell>
+                                </TableCell> */}
                                 <TableCell>{item.title || '---'}</TableCell>
                                 <TableCell>{item.title_kh || '---'}</TableCell>
                                 <TableCell>{item.short_description || '---'}</TableCell>
@@ -207,11 +207,11 @@ const MyTableData = () => {
                                         <span className="capitalize">{item.status}</span>
                                     )}
                                 </TableCell>
-                                <TableCell>{item.category_code || '---'}</TableCell>
+                                {/* <TableCell>{item.category_code || '---'}</TableCell>
                                 <TableCell>{item.type || '---'}</TableCell>
                                 <TableCell>
                                     {item.total_view_counts ? <span className="flex items-center gap-1">{item.total_view_counts}</span> : '---'}
-                                </TableCell>
+                                </TableCell> */}
                                 <TableCell className="whitespace-nowrap">
                                     {item.post_date
                                         ? new Date(item.post_date).toLocaleDateString('en-UK', {
