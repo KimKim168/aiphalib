@@ -45,7 +45,7 @@ const MyService = () => {
                                     <img
                                         src={`/assets/images/items/thumb/${item?.images?.[0]?.image}`}
                                         alt={item?.name}
-                                        className="h-12 w-12 object-cover"
+                                        className="w-20 h-auto object-contain"
                                     />
                                 </div>
                                 <h3 className="mb-2 text-xl font-semibold text-gray-800">{item?.name}</h3>
