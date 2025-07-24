@@ -57,7 +57,7 @@ const MyService = () => {
                         {allDataServices.map((item, index) => (
                             <div key={index} className="rounded-xl bg-white p-6 shadow-md transition duration-300 hover:shadow-lg">
                                 <div className="mb-4">
-                                    <img src={`/assets/images/items/thumb/${item?.images?.[0]?.image}`} alt={item?.name} className="h-12 w-12 object-cover" />
+                                    <img src={`/assets/images/items/thumb/${item?.images?.[0]?.image}`} alt={item?.name} className="w-20 h-auto object-contain" />
                                 </div>
                                 <h3 className="mb-2 text-xl font-semibold text-gray-800">{item?.name}</h3>
                                 <p className="mb-4 text-sm text-gray-600 line-clamp-2">{item?.short_description}</p>
