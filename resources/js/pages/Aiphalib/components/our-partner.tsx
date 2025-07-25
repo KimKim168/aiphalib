@@ -94,7 +94,7 @@ const OurPartner: React.FC = () => {
     return (
         <>
             <div className="mt-5 lg:my-14">
-                <div className="bg-blue-100 py-2 sm:py-10 dark:bg-blue-900">
+                <div className="bg-blue-100 py-2 sm:py-4 dark:bg-blue-900">
                     <div className="container mx-auto px-4">
                         <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                             {locale === 'kh' ? (headingClient?.title_kh ?? headingClient?.title) : headingClient?.title}
@@ -109,7 +109,7 @@ const OurPartner: React.FC = () => {
 
                 <div className="relative w-full overflow-hidden leading-none ">
                     <svg
-                        className="relative block h-[60px] w-[101%] md:h-[150px]"
+                        className="relative block h-[60px] w-[101%] md:h-[90px]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1200 120"
                         preserveAspectRatio="none"
@@ -125,7 +125,7 @@ const OurPartner: React.FC = () => {
                     <div className='mx-auto '>
                         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 xl:grid-cols-6">
                         {ourClients?.map((item, i) => (
-                            <div key={item.id} className="basis-1/2 md:basis-1/3 xl:basis-1/6">
+                            <a target='_blank' href={item?.link} key={item.id} className="basis-1/2 md:basis-1/3 xl:basis-1/6">
                                 <div
                                     className="border-primary bg-background flex flex-col items-center justify-center gap-2 rounded border border-dashed p-2 transition-all duration-300 hover:-translate-2 hover:border-solid hover:shadow-[5px_5px_rgba(104,_96,_255,_0.4),_10px_10px_rgba(104,_96,_255,_0.3),_15px_15px_rgba(104,_96,_255,_0.2)]"
                                 >
@@ -134,7 +134,7 @@ const OurPartner: React.FC = () => {
                                         {locale === 'kh' ? item?.name_kh : item?.name}
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                     </div>

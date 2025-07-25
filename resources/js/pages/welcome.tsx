@@ -148,7 +148,7 @@ const welcome = () => {
 
             {/* Service */}
             <div>
-                <div className="bg-blue-100 py-2 sm:py-10 dark:bg-blue-900">
+                <div className="bg-blue-100 py-2 sm:py-4 dark:bg-blue-900">
                     <div className="container mx-auto px-4">
                         <h2 className="mb-2 text-center sm:mb-4 dark:text-white">Services</h2>
                         <p className="text-center text-2xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200">Our Best Project</p>
@@ -157,7 +157,7 @@ const welcome = () => {
 
                 <div className="relative w-full overflow-hidden leading-none dark:bg-gray-800">
                     <svg
-                        className="relative block h-[60px] w-[101%] md:h-[150px]"
+                        className="relative block h-[60px] w-[101%] md:h-[90px]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1200 120"
                         preserveAspectRatio="none"
@@ -230,7 +230,7 @@ const welcome = () => {
 
             {/* Testmonial */}
             <div>
-                <div className="bg-blue-100 py-2 sm:py-10 dark:bg-blue-900">
+                <div className="bg-blue-100 py-2 sm:py-4 dark:bg-blue-900">
                     <div className="container mx-auto px-4">
                         <h2 className="mb-2 text-center sm:mb-4 dark:text-white">Testimonial</h2>
                         <p className="text-center text-2xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200">What Saying Our Customers</p>
@@ -239,7 +239,7 @@ const welcome = () => {
 
                 <div className="relative w-full overflow-hidden leading-none dark:bg-gray-800">
                     <svg
-                        className="relative block h-[60px] w-[101%] md:h-[150px]"
+                        className="relative block h-[60px] w-[101%] md:h-[90px]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1200 120"
                         preserveAspectRatio="none"
@@ -256,7 +256,7 @@ const welcome = () => {
 
             {/* Blog */}
             <div className="py-2 sm:py-10">
-                <div className="bg-blue-100 py-2 sm:py-10 dark:bg-blue-900">
+                <div className="bg-blue-100 py-2 sm:py-4 dark:bg-blue-900">
                     <div className="container mx-auto px-4">
                         <h2 className="mb-2 text-center sm:mb-4 dark:text-white">Blogs</h2>
                         <p className="text-center text-2xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200">Read Our Latest Tips & Tricks</p>
@@ -265,7 +265,7 @@ const welcome = () => {
 
                 <div className="relative w-full overflow-hidden leading-none dark:bg-gray-800">
                     <svg
-                        className="relative block h-[60px] w-[101%] md:h-[150px]"
+                        className="relative block h-[60px] w-[101%] md:h-[90px]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1200 120"
                         preserveAspectRatio="none"

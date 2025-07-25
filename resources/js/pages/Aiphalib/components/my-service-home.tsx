@@ -9,7 +9,7 @@ const MyService = () => {
   
     return (
         <div className="mt-5 lg:mt-14">
-            <div className="bg-blue-100 py-2 sm:py-10 dark:bg-blue-900">
+            <div className="bg-blue-100 py-2 sm:py-4 dark:bg-blue-900">
                 <div className="container mx-auto px-4">
                     <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                         {locale === 'kh' ? (headingServices?.title_kh ?? headingServices?.title) : headingServices?.title}
@@ -24,7 +24,7 @@ const MyService = () => {
 
             <div className="relative w-full overflow-hidden leading-none ">
                 <svg
-                    className="relative block h-[60px] w-[101%] md:h-[150px]"
+                    className="relative block h-[60px] w-[101%] md:h-[90px]"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1200 120"
                     preserveAspectRatio="none"

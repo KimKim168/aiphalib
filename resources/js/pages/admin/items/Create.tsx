@@ -344,27 +344,26 @@ export default function Create() {
                             </FormItem>
                         )}
                     />
+                    <div className="col-span-6 flex space-x-2">
+                        <span className="flex-1">
+                            <FormField
+                                control={form.control}
+                                name="link"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>{t('Link')}</FormLabel>
+                                        <FormControl>
+                                            <Input placeholder={t('Link')} type="text" {...field} />
+                                        </FormControl>
+                                        <FormDescription>{t('For external content you can put link here.')}</FormDescription>
+                                        <FormMessage>{errors.link && <div>{errors.link}</div>}</FormMessage>
+                                    </FormItem>
+                                )}
+                            />
+                        </span>
+                    </div>
 
                     <div className="grid grid-cols-6 gap-4 lg:grid-cols-12">
-                        {/* <div className="col-span-6 flex space-x-2">
-                            <span className="flex-1">
-                                <FormField
-                                    control={form.control}
-                                    name="link"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('Link')}</FormLabel>
-                                            <FormControl>
-                                                <Input placeholder={t('Link')} type="text" {...field} />
-                                            </FormControl>
-                                            <FormDescription>{t('For external content you can put link here.')}</FormDescription>
-                                            <FormMessage>{errors.link && <div>{errors.link}</div>}</FormMessage>
-                                        </FormItem>
-                                    )}
-                                />
-                            </span>
-                        </div> */}
-
                         <div className="col-span-6">
                             <FormField
                                 control={form.control}
@@ -524,7 +523,7 @@ export default function Create() {
                                 )}
                             />
                         </div> */}
-{/* 
+                        {/* 
                         <div className="col-span-6">
                             <FormField
                                 control={form.control}
@@ -600,7 +599,7 @@ export default function Create() {
                                 )}
                             />
                         </div> */}
-{/* 
+                        {/* 
                         <div className="col-span-6">
                             <FormField
                                 control={form.control}
@@ -687,8 +686,8 @@ export default function Create() {
                                     <FormItem key={field.value}>
                                         <FormLabel>{t('Status')}</FormLabel>
                                         <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                            <FormControl className='h-10'>
-                                                <SelectTrigger >
+                                            <FormControl className="h-10">
+                                                <SelectTrigger>
                                                     <SelectValue placeholder="Select Status" />
                                                 </SelectTrigger>
                                             </FormControl>
