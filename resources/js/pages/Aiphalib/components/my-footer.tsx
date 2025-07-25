@@ -45,7 +45,7 @@ const MyFooter = () => {
     const companyName = 'Powered By:';
 
     return (
-        <footer className="bg-[#06473d] mt-16 py-12 text-white">
+        <footer className="bg-[#06473d] mt-16 py-4 text-white">
             <div className="mx-auto max-w-screen-2xl px-4 md:px-8 xl:px-20">
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 items-start gap-2 text-center md:grid-cols-2 md:text-left">
