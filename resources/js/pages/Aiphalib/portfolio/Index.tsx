@@ -17,7 +17,7 @@ const Index = () => {
                 <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                     {locale === 'kh' ? (headingClient?.title_kh ?? headingClient?.title) : headingClient?.title}
                 </h2>
-                <p className={`mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
+                <p className={`mb-5 xl:mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
                     {locale === 'kh'
                         ? (headingClient?.short_description_kh ?? headingClient?.short_description)
                         : headingClient?.short_description}

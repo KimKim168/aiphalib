@@ -44,7 +44,7 @@ const MyService = () => {
                 <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                     {locale === 'kh' ? (headingServices?.title_kh ?? headingServices?.title) : headingServices?.title}
                 </h2>
-                <p className={`mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
+                <p className={`mb-5 xl:mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
                     {locale === 'kh'
                         ? (headingServices?.short_description_kh ?? headingServices?.short_description)
                         : headingServices?.short_description}

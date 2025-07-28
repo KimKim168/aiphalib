@@ -11,7 +11,7 @@ const ContactSection = () => {
                 <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                     {locale === 'kh' ? (headingContact?.title_kh ?? headingContact?.title) : headingContact?.title}
                 </h2>
-                <p className={`mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
+                <p className={`mb-5 xl:mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
                     {locale === 'kh'
                         ? (headingContact?.short_description_kh ?? headingContact?.short_description)
                         : headingContact?.short_description}
