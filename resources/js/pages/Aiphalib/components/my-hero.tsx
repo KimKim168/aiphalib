@@ -19,16 +19,16 @@ const MyHero = () => {
                         />
                     </div>
 
-                    {/* Decorative Circles */}
-                    <div className="absolute bottom-4 -left-4 h-12 w-12 rounded-full bg-blue-100 opacity-40 sm:h-16 sm:w-16"></div>
-                    <div className="absolute bottom-10 -left-6 h-10 w-10 rounded-full bg-blue-200 opacity-50 sm:h-14 sm:w-14"></div>
-                    <div className="absolute right-4 h-12 w-12 rounded-full bg-blue-100 opacity-30 sm:h-16 sm:w-16"></div>
-                    <div className="absolute top-8 right-2 h-10 w-10 rounded-full bg-blue-200 opacity-40 sm:h-14 sm:w-14"></div>
+                    {/* Decorative Circles - Thin Style */}
+                    <div className="absolute bottom-4 -left-4 h-12 w-12 rounded-full bg-[rgba(11,127,127,0.2)] sm:h-16 sm:w-16"></div>
+                    <div className="absolute bottom-10 -left-6 h-10 w-10 rounded-full bg-[rgba(11,127,127,0.15)] sm:h-14 sm:w-14"></div>
+                    <div className="absolute right-4 h-12 w-12 rounded-full bg-[rgba(11,127,127,0.1)] sm:h-16 sm:w-16"></div>
+                    <div className="absolute top-8 right-2 h-10 w-10 rounded-full bg-[rgba(11,127,127,0.15)] sm:h-14 sm:w-14"></div>
                 </div>
 
                 {/* Right: Content Section */}
                 <div>
-                    <p className="text-primary-two mb-2 text-sm font-semibold tracking-widest uppercase">About</p>
+                    <p className="text-primary-two mb-2 text-sm font-semibold tracking-widest uppercase">About Us</p>
                     <h2 className="text-primary-tree mb-4 text-2xl leading-snug font-extrabold lg:text-4xl">{item.name}</h2>
                     <div
                         className="text-primary-tree prose mb-8 text-base leading-relaxed whitespace-pre-line"

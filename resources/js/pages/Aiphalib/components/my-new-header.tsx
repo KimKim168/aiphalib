@@ -5,8 +5,7 @@ import Switch from './my-switch';
 const MyNewHeader = () => {
     const { application_info } = usePage().props;
     return (
-        <div>
-            <div className="bg-white dark:bg-black">
+            <div className="bg-white backdrop-blur-md dark:bg-black/80 border-b sticky top-0 z-50">
                 <div className="mx-auto flex max-w-screen-2xl items-center gap-2 px-3 py-2 sm:px-10 xl:px-20">
                     <a href="/" className="flex flex-1 items-center gap-2 text-center text-base text-white md:text-xl lg:text-xl">
                         <img
@@ -21,7 +20,6 @@ const MyNewHeader = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 

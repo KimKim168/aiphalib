@@ -23,8 +23,10 @@ const MyMenu = () => {
         { id: 1, name: t('Home'), link: '/' },
         { id: 2, name: t('About Us'), link: '/about' },
         { id: 3, name: t('Services'), link: '/services' },
+        { id: 5, name: t('Portfolio'), link: '/portfolio' },
         { id: 4, name: t('Products'), link: '/products' },
         { id: 5, name: t('Support'), link: '/support' },
+        
     ];
 
     const getLinkClass = (linkPath: string) =>

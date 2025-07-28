@@ -84,6 +84,20 @@ Route::get('/services/{id}', function ($id) {
     ]);
 });
 
+Route::get('/portfolio', function () {
+    $headingClient = Heading::where('code', 'OUR_CLIENTS')->where('status', 'active')->first();
+    $ourClients = Item::where('category_code', 'OUR_CLIENTS')
+        ->where('status', 'active')
+        ->orderBy('id', 'desc')
+        ->with('images') // eager load
+        ->get();
+    // return ($allDataServices);
+    return Inertia::render('Aiphalib/portfolio/Index', [
+        'headingClient' => $headingClient,
+        'ourClients' => $ourClients,
+    ]);
+});
+
 Route::get('/products', function () {
     $headingProduct = Heading::where('code', 'OUR_PRODUCTS')->where('status', 'active')->first();
     $allDataProducts = Item::where('category_code', 'PRODUCTS')

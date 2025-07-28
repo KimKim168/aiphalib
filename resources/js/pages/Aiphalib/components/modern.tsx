@@ -4,7 +4,7 @@ import React from 'react';
 const Modern = () => {
   const { support, dataSupport } = usePage().props;
   return (
-    <section className="grid grid-cols-1 gap-8 px-4 py-10 lg:grid-cols-2 lg:px-20">
+    <section className="mx-auto max-w-screen-2xl px-4 sm:px-10 xl:px-20 grid grid-cols-1 gap-8 py-10 lg:grid-cols-2 ">
       {/* Left: Large Image */}
       <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-lg">
         <img

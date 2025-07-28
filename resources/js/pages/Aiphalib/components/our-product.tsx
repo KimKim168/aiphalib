@@ -51,17 +51,17 @@ const   OurProduct = () => {
     // ];
     return (
         <div className="pt-5 lg:pt-10">
-            <div className="container mx-auto px-4">
+            <div className="flex flex-col items-center mx-auto px-4">
                 <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                     {locale === 'kh' ? (headingProduct?.title_kh ?? headingProduct?.title) : headingProduct?.title}
                 </h2>
-                <p className={`mb-10 text-center text-xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200 ${fontClass}`}>
+                <p className={`mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
                     {locale === 'kh'
                         ? (headingProduct?.short_description_kh ?? headingProduct?.short_description)
                         : headingProduct?.short_description}
                 </p>
             </div>
-            <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 md:px-20">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 xl:px-20">
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {allDataProducts?.map((item) => (
                         <div key={item.id} className="overflow-hidden rounded-2xl bg-white shadow-lg">

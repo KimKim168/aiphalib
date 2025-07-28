@@ -7,18 +7,18 @@ const ContactSection = () => {
     const fontClass = locale === 'kh' ? 'font-siemreap-regular' : '';
     return (
         <section className="py-16">
-            <div className="container mx-auto px-4">
+            <div className="flex flex-col items-center mx-auto px-4">
                 <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                     {locale === 'kh' ? (headingContact?.title_kh ?? headingContact?.title) : headingContact?.title}
                 </h2>
-                <p className={`mb-10 text-center text-xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200 ${fontClass}`}>
+                <p className={`mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
                     {locale === 'kh'
                         ? (headingContact?.short_description_kh ?? headingContact?.short_description)
                         : headingContact?.short_description}
                 </p>
             </div>
 
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 xl:px-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {/* Email */}
                 <div className="flex items-center gap-4 rounded-xl bg-gray-100 p-6 shadow-sm">
                     <div className="rounded-full bg-teal-700 p-4 text-white">

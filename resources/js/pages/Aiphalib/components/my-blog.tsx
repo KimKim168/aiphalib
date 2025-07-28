@@ -12,7 +12,7 @@ const MyBlog = () => {
                 <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                     {locale === 'kh' ? (headingBlog?.title_kh ?? headingBlog?.title) : headingBlog?.title}
                 </h2>
-                <p className={`mb-10 text-center text-xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200 ${fontClass}`}>
+                <p className={`mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
                     {locale === 'kh' ? (headingBlog?.short_description_kh ?? headingBlog?.short_description) : headingBlog?.short_description}
                 </p>
             </div>

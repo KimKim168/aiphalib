@@ -40,18 +40,18 @@ const MyService = () => {
 
     return (
         <div className="mt-5 lg:mt-14">
-            <div className="container mx-auto px-4">
+            <div className="flex flex-col items-center mx-auto px-4">
                 <h2 className={`text-primary mb-2 text-center text-base font-bold ${fontClass}`}>
                     {locale === 'kh' ? (headingServices?.title_kh ?? headingServices?.title) : headingServices?.title}
                 </h2>
-                <p className={`mb-10 text-center text-xl font-bold text-gray-700 sm:text-3xl dark:text-gray-200 ${fontClass}`}>
+                <p className={`mb-10 text-center text-lg font-bold text-gray-700 sm:text-xl dark:text-gray-200 max-w-3xl ${fontClass}`}>
                     {locale === 'kh'
                         ? (headingServices?.short_description_kh ?? headingServices?.short_description)
                         : headingServices?.short_description}
                 </p>
             </div>
 
-            <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 md:px-20 ">
+            <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 xl:px-20 ">
                 <div className="mx-auto">
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {allDataServices.map((item, index) => (
