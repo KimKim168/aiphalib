@@ -45,7 +45,7 @@ const Show = () => {
     return (
         <AiphalibLayout>
             <Head title={('About Us')} />
-            <section className="mx-auto max-w-screen-2xl sm:px-10 xl:px-20 py-10">
+            <section className="mx-auto max-w-screen-2xl py-5 px-4 sm:px-10 xl:px-20 xl:py-10">
                 <section className="prose dark:prose-invert max-w-none">
                     <div dangerouslySetInnerHTML={{ __html: page?.long_description }} />
                 </section>

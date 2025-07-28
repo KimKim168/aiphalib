@@ -7,7 +7,7 @@ const MyHero = () => {
     if (!item) return null;
     // console.log(item);
     return (
-        <section className="relative mt-10 overflow-hidden px-4 md:px-20 lg:mt-20">
+        <section className="relative mt-10 overflow-hidden mx-auto max-w-screen-2xl px-4 sm:px-10 md:px-20 lg:mt-20">
             <div className="grid items-center gap-10 lg:grid-cols-2">
                 {/* Left: Image Section */}
                 <div className="relative flex w-full justify-center">

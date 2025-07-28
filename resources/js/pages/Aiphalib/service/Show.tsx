@@ -9,7 +9,7 @@ const Show = () => {
         <AiphalibLayout>
             <Head title={'Services'} />
 
-            <div className="mx-auto my-10 grid max-w-screen-2xl flex-col gap-6 px-4 sm:px-10 lg:grid-cols-3 xl:px-20">
+            <div className="mx-auto my-5 xl:my-10 grid max-w-screen-2xl flex-col gap-6 px-4 sm:px-10 lg:grid-cols-3 xl:px-20">
                 <div className="prose dark:prose-invert flex min-h-[200px] w-full max-w-none items-center justify-center lg:col-span-2">
                     {service?.long_description ? <div dangerouslySetInnerHTML={{ __html: service.long_description }} /> : <MyNoData />}
                 </div>
